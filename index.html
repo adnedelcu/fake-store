@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fake Store</title>
+    </head>
+    <body>
+        <main class="w-96 m-auto">
+            <h2 class="text-2xl font-bold text-center">Products</h2>
+            <section id="products" class="w-96 m-auto">
+                <article class='card shadow-xl flex flex-col gap-4 m-4 h-96 '>
+                    <div class='skeleton h-36 w-full rounded-t-2xl rounded-b-none '></div>
+                    <div class='flex flex-col gap-4 m-8'>
+                        <div class='skeleton h-4 w-28'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                    </div>
+                </article>
+                <article class='card shadow-xl flex flex-col gap-4 m-4 h-96 '>
+                    <div class='skeleton h-36 w-full rounded-t-2xl rounded-b-none '></div>
+                    <div class='flex flex-col gap-4 m-8'>
+                        <div class='skeleton h-4 w-28'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                    </div>
+                </article>
+                <article class='card shadow-xl flex flex-col gap-4 m-4 h-96 '>
+                    <div class='skeleton h-36 w-full rounded-t-2xl rounded-b-none '></div>
+                    <div class='flex flex-col gap-4 m-8'>
+                        <div class='skeleton h-4 w-28'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                    </div>
+                </article>
+                <article class='card shadow-xl flex flex-col gap-4 m-4 h-96 '>
+                    <div class='skeleton h-36 w-full rounded-t-2xl rounded-b-none '></div>
+                    <div class='flex flex-col gap-4 m-8'>
+                        <div class='skeleton h-4 w-28'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                        <div class='skeleton h-4 w-full'></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <template id="product-template">
+            <article class='card shadow-xl flex flex-col gap-4 m-4 h-96 '>
+                <figure>
+                    <img class='w-full h-36 object-cover aspect-square' src={{image}} alt={{title}} />
+                </figure>
+                <div class='card-body flex flex-col gap-4'>
+                    <div class='card-title text-white'>{{title}}</div>
+                    <!-- <p class='h-4 w-full'>{{description}}</p> -->
+                    <div class='h-4 w-full'>{{category}}</div>
+                    <div class='h-4 w-full'>{{price}}</div>
+                    <div class='h-4 w-full'>{{rating}}</div>
+                    <div class='h-4 w-full'>{{reviews}} reviews</div>
+                </div>
+                <div class="card-footer">
+                    <button class="add-to-cart btn btn-primary" data-product='{{productId}}'>Add to cart</button>
+                </div>
+            </article>
+        </template>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
